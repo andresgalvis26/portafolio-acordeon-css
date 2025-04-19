@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -102,4 +102,149 @@ body {
   font-size: 18px;
   font-weight: 200;
   color: white;
+} */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  overflow: hidden;
+}
+
+header {
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  padding: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.cards {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px 20px 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.card {
+  height: 500px;
+  width: 150px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1rem;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+.card.active {
+  width: 700px;
+  opacity: 1;
+}
+
+.icon_container {
+  width: 100px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card.active .icon_container {
+  width: 60px;
+}
+
+.icon {
+  stroke: #fff;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.info_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.active .info_container {
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 20px;
+}
+
+.info {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  padding: 10px 15px;
+  color: white;
+}
+
+.card.active .info {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.main {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sub {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ccc;
+}
+
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  width: 100%;
 }
