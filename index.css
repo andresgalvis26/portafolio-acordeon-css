@@ -248,3 +248,65 @@ footer {
   font-weight: 400;
   width: 100%;
 }
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 30px 20px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.profile-card, .cv-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.profile-card {
+  flex: 0 0 70%;
+}
+
+.cv-card {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-card h3,
+.cv-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #1f2937;
+}
+
+.cv-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #1f2937;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.cv-btn:hover {
+  background-color: #111827;
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+  }
+
+  .profile-card, .cv-card {
+    flex: 1 1 100%;
+  }
+}
